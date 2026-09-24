@@ -1,0 +1,82 @@
+{
+  "products": [
+    {
+      "name": "Casual Pocket Denim Jacket",
+      "shop": "TEN11",
+      "type": "jacket",
+      "people": "men",
+      "oriPrice": 23.55,
+      "discountPercent": 15,
+      "disPrice": 20.02,
+      "image": "https://zand.sgp1.cdn.digitaloceanspaces.com/catalog/products/2026-08/21226021859/STU_0408.jpg",
+      "id": "2"
+    },
+    {
+      "name": "Lightweight Mock Neck Zipper Jacket",
+      "shop": "TEN11",
+      "type": "jacket",
+      "people": "men",
+      "oriPrice": 15.11,
+      "discountPercent": 10,
+      "disPrice": 13.6,
+      "image": "https://zand.sgp1.cdn.digitaloceanspaces.com/catalog/products/2026-08/11226021742/STU_9732.jpg",
+      "id": "3"
+    },
+    {
+      "name": "Lightweight Hooded Windbreaker Jacket",
+      "shop": "TEN11",
+      "type": "jacket",
+      "people": "men",
+      "oriPrice": 30.11,
+      "discountPercent": 15,
+      "disPrice": 25.59,
+      "image": "https://zand.sgp1.cdn.digitaloceanspaces.com/catalog/products/2026-07-II/51202511010/STU_1117.jpg",
+      "id": "4"
+    },
+    {
+      "name": "Classic Long-Sleeve Shirt",
+      "shop": "Zando",
+      "type": "shirt",
+      "people": "men",
+      "oriPrice": 21,
+      "discountPercent": 15,
+      "disPrice": 17.85,
+      "image": "https://zand.sgp1.cdn.digitaloceanspaces.com/cache/catalog/products/2026-09/1112608010/STU_6482-cr-450x672.jpg",
+      "id": "ZiVnr3UKVi0"
+    },
+    {
+      "name": "Wide-Leg Pleated Long Pants",
+      "shop": "Zando",
+      "type": "pant",
+      "people": "men",
+      "oriPrice": 23,
+      "discountPercent": 10,
+      "disPrice": 20.7,
+      "image": "https://zand.sgp1.cdn.digitaloceanspaces.com/catalog/banner/2026/ZANDO%20New%20Version/Sale/Big%20Sale/2026/P'chum%20Ben%20Sale/look/new/MEN/4.png",
+      "id": "CllqnyNMF4M"
+    },
+    {
+      "name": "UNISEX-BRONCO SLUB BOXY TEE",
+      "shop": "Ten11",
+      "type": "shirt",
+      "people": "men",
+      "oriPrice": 34.56,
+      "discountPercent": 10,
+      "disPrice": 31.1,
+      "image": "https://zand.sgp1.cdn.digitaloceanspaces.com/cache/catalog/products/2026-09/10112608414/CMI1160005%20(2)-cr-450x672.jpg",
+      "id": "Yyx-r7luo9I"
+    },
+    {
+      "name": "Polo-kid-shirt",
+      "shop": "Polo",
+      "type": "shirt",
+      "people": "kids",
+      "oriPrice": 12,
+      "discountPercent": 10,
+      "disPrice": 10.8,
+      "image": "https://zand.sgp1.cdn.digitaloceanspaces.com/cache/catalog/products/2026-03/1322508378/H7_06718-cr-450x672.jpg",
+      "id": "KJW_7kIR2sc"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
