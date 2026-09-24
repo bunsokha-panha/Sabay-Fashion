@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+const API_URL = "https://sabay-fashion-api.onrender.com";
+
 function AdminProducts() {
     const navigate = useNavigate();
 
@@ -34,9 +36,7 @@ function AdminProducts() {
 
     async function fetchProducts() {
         try {
-            const res = await fetch(
-                "http://localhost:8000/products"
-            );
+            const res = await fetch(`${API_URL}/products`);
 
             const data = await res.json();
 
@@ -156,7 +156,7 @@ function AdminProducts() {
             // EDIT
             if (editingProduct) {
                 const res = await fetch(
-                    `http://localhost:8000/products/${editingProduct.id}`,
+                    `${API_URL}/products/${editingProduct.id}`,
                     {
                         method: "PUT",
                         headers: {
@@ -176,7 +176,7 @@ function AdminProducts() {
             // ADD
             else {
                 const res = await fetch(
-                    "http://localhost:8000/products",
+                    `${API_URL}/products`,
                     {
                         method: "POST",
                         headers: {
@@ -214,7 +214,7 @@ function AdminProducts() {
 
         try {
             const res = await fetch(
-                `http://localhost:8000/products/${id}`,
+                `${API_URL}/products/${id}`,
                 {
                     method: "DELETE"
                 }
@@ -224,7 +224,6 @@ function AdminProducts() {
                 throw new Error("Failed to delete product");
             }
 
-            // Remove the deleted product from the current list
             setProducts(prevProducts =>
                 prevProducts.filter(
                     product => String(product.id) !== String(id)
@@ -265,8 +264,6 @@ function AdminProducts() {
                         </div>
 
                         <div className="flex items-center gap-3">
-
-                            
 
                             <button
                                 onClick={handleLogout}
@@ -375,41 +372,15 @@ function AdminProducts() {
                                             Select product type
                                         </option>
 
-                                        <option value="shirt">
-                                            Shirt
-                                        </option>
-
-                                        <option value="pant">
-                                            Pant
-                                        </option>
-
-                                        <option value="shoe">
-                                            Shoe
-                                        </option>
-
-                                        <option value="hat">
-                                            Hat
-                                        </option>
-
-                                        <option value="jacket">
-                                            Jacket
-                                        </option>
-
-                                        <option value="dress">
-                                            Dress
-                                        </option>
-
-                                        <option value="short">
-                                            Short
-                                        </option>
-
-                                        <option value="skirt">
-                                            Skirt
-                                        </option>
-
-                                        <option value="accessory">
-                                            Accessory
-                                        </option>
+                                        <option value="shirt">Shirt</option>
+                                        <option value="pant">Pant</option>
+                                        <option value="shoe">Shoe</option>
+                                        <option value="hat">Hat</option>
+                                        <option value="jacket">Jacket</option>
+                                        <option value="dress">Dress</option>
+                                        <option value="short">Short</option>
+                                        <option value="skirt">Skirt</option>
+                                        <option value="accessory">Accessory</option>
                                     </select>
                                 </div>
 
@@ -433,17 +404,9 @@ function AdminProducts() {
                                             Select people
                                         </option>
 
-                                        <option value="men">
-                                            Men
-                                        </option>
-
-                                        <option value="women">
-                                            Women
-                                        </option>
-
-                                        <option value="kids">
-                                            Kids
-                                        </option>
+                                        <option value="men">Men</option>
+                                        <option value="women">Women</option>
+                                        <option value="kids">Kids</option>
                                     </select>
                                 </div>
 
@@ -497,9 +460,7 @@ function AdminProducts() {
                                             type="number"
                                             id="discountPercent"
                                             name="discountPercent"
-                                            value={
-                                                productData.discountPercent
-                                            }
+                                            value={productData.discountPercent}
                                             onChange={handleInputChange}
                                             min="0"
                                             max="100"
@@ -528,18 +489,11 @@ function AdminProducts() {
                                     <p className="mt-1 text-3xl font-bold text-blue-700">
                                         $
                                         {(
-                                            Number(
-                                                productData.oriPrice
-                                            ) -
+                                            Number(productData.oriPrice) -
                                             (
-                                                Number(
-                                                    productData.oriPrice
-                                                ) *
-                                                Number(
-                                                    productData.discountPercent || 0
-                                                )
-                                            ) /
-                                            100
+                                                Number(productData.oriPrice) *
+                                                Number(productData.discountPercent || 0)
+                                            ) / 100
                                         ).toFixed(2)}
                                     </p>
 
@@ -696,18 +650,14 @@ function AdminProducts() {
 
                                     <span className="text-2xl font-bold text-gray-900">
                                         $
-                                        {Number(
-                                            product.disPrice
-                                        ).toFixed(2)}
+                                        {Number(product.disPrice).toFixed(2)}
                                     </span>
 
                                     {Number(product.oriPrice) >
                                         Number(product.disPrice) && (
                                         <span className="text-sm text-gray-400 line-through">
                                             $
-                                            {Number(
-                                                product.oriPrice
-                                            ).toFixed(2)}
+                                            {Number(product.oriPrice).toFixed(2)}
                                         </span>
                                     )}
 
@@ -717,9 +667,7 @@ function AdminProducts() {
                                 <div className="mt-6 flex gap-3">
 
                                     <button
-                                        onClick={() =>
-                                            handleEdit(product)
-                                        }
+                                        onClick={() => handleEdit(product)}
                                         className="flex-1 rounded-xl bg-blue-600 py-3 font-semibold text-white transition hover:bg-blue-700"
                                     >
                                         Edit

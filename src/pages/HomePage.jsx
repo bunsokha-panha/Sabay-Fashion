@@ -9,7 +9,7 @@ function HomePage() {
   async function getFeaturedProducts() {
     setIsLoading(true)
     try {
-      const res = await fetch("http://localhost:8000/products")
+      const res = await fetch("https://sabay-fashion-api.onrender.com/products")
       const data = await res.json()
       setProducts(data)
     } catch (error) {

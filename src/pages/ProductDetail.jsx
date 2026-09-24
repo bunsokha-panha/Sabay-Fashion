@@ -27,7 +27,7 @@ function ProductDetail() {
             setError(false)
 
             const res = await fetch(
-                `http://localhost:8000/products/${id}`
+                `https://sabay-fashion-api.onrender.com/products/${id}`
             )
 
             if (!res.ok) {
