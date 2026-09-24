@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "server": "json-server --port 8000 src/api/db.json",
+    "server:render": "json-server --host 0.0.0.0 --port $PORT src/api/db.json",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
