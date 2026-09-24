@@ -1,6 +1,11 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
+import { FaFacebook } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { AiFillTikTok } from "react-icons/ai";
+import { ImYoutube } from "react-icons/im";
+
 function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
